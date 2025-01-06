@@ -5,16 +5,18 @@ require "discourse_api"
 require "./utah_legislature"
 
 class SyncBills
-  def execute
-    bills = UtahLegislature.get_bills
-    bills.each do |bill|
-      sync_topic(bill)
-    end
+  def self.execute
+    @utleg = UtahLegislature.new
+    bills = @utleg.get_bills
+    #bills.each do |bill|
+    puts bills.first.title
+    sync_topic(bills.first)
+    #end
   end
 
   private
 
-  def sync_topic(bill)
+  def self.sync_topic(bill)
     client = DiscourseApi::Client.new(ENV["DISCOURSE_URL"])
     client.api_key = ENV["DISCOURSE_API_KEY"]
     client.api_username = ENV["DISCOURSE_USERNAME"]
@@ -22,3 +24,5 @@ class SyncBills
     client.create_topic(bill.for_discourse)
   end
 end
+
+SyncBills.execute

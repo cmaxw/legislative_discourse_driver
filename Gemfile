@@ -7,3 +7,5 @@ gem "nokogiri"
 
 gem "minitest"
 gem "awesome_print"
+
+gem "base64"

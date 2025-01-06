@@ -19,4 +19,11 @@ class UtahLegislature
       Bill.new(session: session, number: bill["number"])
     end
   end
+
+  def get_files
+    response = Faraday.get("https://glen.le.utah.gov/bills/#{session}/filelist/#{token}")
+    JSON.parse(response.body).map do |bill|
+      Bill.new(session: session, number: bill["number"])
+    end
+  end
 end
