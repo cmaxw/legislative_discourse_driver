@@ -1,14 +1,37 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activemodel (7.2.2.1)
+      activesupport (= 7.2.2.1)
+    activerecord (7.2.2.1)
+      activemodel (= 7.2.2.1)
+      activesupport (= 7.2.2.1)
+      timeout (>= 0.4.0)
+    activesupport (7.2.2.1)
+      base64
+      benchmark (>= 0.3)
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.3.1)
+      connection_pool (>= 2.2.5)
+      drb
+      i18n (>= 1.6, < 2)
+      logger (>= 1.4.2)
+      minitest (>= 5.1)
+      securerandom (>= 0.3)
+      tzinfo (~> 2.0, >= 2.0.5)
     awesome_print (1.9.2)
     base64 (0.2.0)
+    benchmark (0.4.0)
+    bigdecimal (3.1.9)
+    concurrent-ruby (1.3.4)
+    connection_pool (2.4.1)
     discourse_api (2.0.1)
       faraday (~> 2.7)
       faraday-follow_redirects
       faraday-multipart
       rack (>= 1.6)
     dotenv (3.1.7)
+    drb (2.2.1)
     faraday (2.12.2)
       faraday-net_http (>= 2.0, < 3.5)
       json
@@ -19,6 +42,8 @@ GEM
       multipart-post (~> 2.0)
     faraday-net_http (3.4.0)
       net-http (>= 0.5.0)
+    i18n (1.14.6)
+      concurrent-ruby (~> 1.0)
     json (2.9.1)
     logger (1.6.4)
     mini_portile2 (2.8.8)
@@ -33,6 +58,14 @@ GEM
       racc (~> 1.4)
     racc (1.8.1)
     rack (3.1.8)
+    rake (13.2.1)
+    securerandom (0.4.1)
+    sqlite3 (2.5.0)
+      mini_portile2 (~> 2.8.0)
+    sqlite3 (2.5.0-x86_64-linux-gnu)
+    timeout (0.4.3)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
     uri (1.0.2)
 
 PLATFORMS
@@ -40,6 +73,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  activerecord
   awesome_print
   base64
   discourse_api
@@ -47,6 +81,8 @@ DEPENDENCIES
   faraday
   minitest
   nokogiri
+  rake
+  sqlite3
 
 BUNDLED WITH
    2.5.23
