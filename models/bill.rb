@@ -73,7 +73,7 @@ class Bill < ActiveRecord::Base
   def raw_post_content
     <<-POST
 ### Link to Bill: [#{link}](#{link})
-### Bill Sponsor: [#{prime_sponsor.full_name}](https://ucrp.discourse.group/tag/#{prime_sponsor.tag})
+### Bill Sponsor: [#{prime_sponsor.full_name}](https://ucrp.discourse.group/tags/c/all-bills-lcc/#{prime_sponsor.tag}?board=default)
 Email: [#{prime_sponsor.email}](mailto:#{prime_sponsor.email})
 Phone: [#{prime_sponsor.phone}](tel:#{prime_sponsor.email})
 
