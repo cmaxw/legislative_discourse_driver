@@ -8,4 +8,8 @@ class Discourse
   def create_topic(attributes)
     @client.create_topic(attributes)
   end
+
+  def categories
+    @client.categories
+  end
 end

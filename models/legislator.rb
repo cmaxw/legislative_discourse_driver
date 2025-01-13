@@ -20,6 +20,10 @@ class Legislator < ActiveRecord::Base
     })
   end
 
+  def utah_county?
+    counties.downcase.split(",").map(&:strip).include?("utah")
+  end
+
   private
 
   def self.import_chamber(house)
