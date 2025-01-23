@@ -17,6 +17,15 @@ class Discourse
     @client.search(search)
   end
 
+  def get_topic(topic_id)
+    @client.topic(topic_id)
+  end
+
+  def get_topic_link(topic_id)
+    topic = get_topic(topic_id)
+    "[#{topic["title"]}](#{ENV["DISCOURSE_URL"]}/t/#{topic_id})"
+  end
+
   def categories
     @client.categories
   end

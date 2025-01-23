@@ -4,6 +4,7 @@ Dotenv.load
 require "discourse_api"
 require "open_router"
 require "awesome_print"
+require "feedjira"
 
 OpenRouter.configure do |config|
   config.access_token = ENV["OPENROUTER_API_KEY"]
