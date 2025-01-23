@@ -9,6 +9,14 @@ class Discourse
     @client.create_topic(attributes)
   end
 
+  def create_post(attributes)
+    @client.create_post(attributes)
+  end
+
+  def search(search)
+    @client.search(search)
+  end
+
   def categories
     @client.categories
   end

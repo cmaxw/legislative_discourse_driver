@@ -1,10 +1,11 @@
 source "https://rubygems.org"
 
+gem "activerecord"
 gem "discourse_api"
 gem "dotenv"
 gem "faraday"
 gem "nokogiri"
-gem "activerecord"
+gem "open_router"
 gem "rake"
 gem "sqlite3"
 

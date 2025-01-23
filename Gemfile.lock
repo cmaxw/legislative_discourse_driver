@@ -56,6 +56,11 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.1-x86_64-linux-gnu)
       racc (~> 1.4)
+    open_router (0.3.3)
+      activesupport (>= 6.0)
+      dotenv (>= 2)
+      faraday (>= 1)
+      faraday-multipart (>= 1)
     racc (1.8.1)
     rack (3.1.8)
     rake (13.2.1)
@@ -81,6 +86,7 @@ DEPENDENCIES
   faraday
   minitest
   nokogiri
+  open_router
   rake
   sqlite3
 

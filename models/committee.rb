@@ -8,7 +8,7 @@ class Committee < ActiveRecord::Base
       link: attrs_hash["hash"],
     })
 
-    legislator_ids = attrs_hash["members"].map { |member| member["id"] }.map { |id| Legislator.find_by(tag: id).id }
+    legislator_ids = attrs_hash["members"].map { |member| member["id"] }.map { |id| Legislator.find_by(tag: id)&.id }.compact
     committee.legislator_ids = legislator_ids
   end
 end
