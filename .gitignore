@@ -1,2 +1,4 @@
 .env
 db/production.db
+db/production.db-shm
+db/production.db-wal
