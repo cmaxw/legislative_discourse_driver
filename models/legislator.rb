@@ -1,3 +1,21 @@
+# == Schema Information
+#
+# Table name: legislators
+#
+#  id                                 :integer          not null, primary key
+#  tag                                :string
+#  chamber                            :integer
+#  full_name                          :string
+#  party                              :integer
+#  district                           :integer
+#  counties                           :string
+#  created_at                         :datetime         not null
+#  updated_at                         :datetime         not null
+#  email                              :string
+#  phone                              :string
+#  discourse_committee_topic_id       :integer
+#  discourse_sponsored_bills_topic_id :integer
+#
 class Legislator < ActiveRecord::Base
   has_many :bill_versions, as: :sponsor
   has_many :sponsored_bills, as: :prime_sponsor

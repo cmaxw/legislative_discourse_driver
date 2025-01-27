@@ -1,3 +1,27 @@
+# == Schema Information
+#
+# Table name: bills
+#
+#  id                        :integer          not null, primary key
+#  title                     :string
+#  session_id                :integer
+#  tracking_id               :string
+#  short_number              :string
+#  general_provisions        :text
+#  moneys_appropriated       :string
+#  link                      :string
+#  created_at                :datetime         not null
+#  updated_at                :datetime         not null
+#  prime_sponsor_id          :integer
+#  floor_sponsor_id          :integer
+#  discourse_topic_id        :string
+#  committee_recommendations :text
+#  number                    :string
+#  last_updated              :datetime
+#  ai_summary                :text
+#  ai_summary_generated_at   :datetime
+#  ai_summary_posted_at      :datetime
+#
 class Bill < ActiveRecord::Base
   belongs_to :session
   belongs_to :prime_sponsor, class_name: "Legislator"

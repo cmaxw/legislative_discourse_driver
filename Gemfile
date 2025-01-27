@@ -12,5 +12,6 @@ gem "sqlite3"
 
 gem "minitest"
 gem "awesome_print"
+gem "annotate"
 
 gem "base64"
